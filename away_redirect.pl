@@ -6,7 +6,7 @@ use Irssi;
 use Irssi::Irc;
 use vars qw($VERSION %IRSSI);
 
-$VERSION = "1.0";
+$VERSION = "1.1";
 
 %IRSSI = (
     authors     => "ems",
@@ -19,7 +19,7 @@ $VERSION = "1.0";
 
 sub redirect_message {
     my ($title, $sender, $content) = @_;
-    Irssi::command("msg -bitlbee phone " . $title . " " . $content); # FIXME
+    Irssi::command("msg -bitlbee phone " . $title . " " . $sender . ": " $content); # FIXME
 }
 
 sub public_message {
