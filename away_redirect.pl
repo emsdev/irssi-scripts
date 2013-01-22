@@ -19,7 +19,7 @@ $VERSION = "1.1";
 
 sub redirect_message {
     my ($title, $sender, $content) = @_;
-    Irssi::command("msg -bitlbee phone " . $title . " " . $sender . ": " $content); # FIXME
+    Irssi::command("msg -bitlbee phone " . $title . " " . $sender . ": " . $content); # FIXME
 }
 
 sub public_message {
